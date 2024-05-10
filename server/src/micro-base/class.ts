@@ -5,4 +5,6 @@ export class TERMBASE_SIMPLE {
     content: string;
     @ApiProperty()
     translateContent: string;
+    @ApiProperty()
+    locale?: string;
   }

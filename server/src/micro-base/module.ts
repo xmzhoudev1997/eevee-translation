@@ -19,7 +19,7 @@ import { MicroTermbaseService } from './termbase';
       },
       {
         name: 'EEVEE_TERMBASE',
-        useFactory: async (...a) => {
+        useFactory: async () => {
           return {
             transport: Transport.TCP,
             options: {
@@ -34,4 +34,4 @@ import { MicroTermbaseService } from './termbase';
   providers: [MicroUserService, MicroTermbaseService],
   exports: [MicroUserService, MicroTermbaseService],
 })
-export class MincroBaseModule { }
+export class MicroBaseModule { }

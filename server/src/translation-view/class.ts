@@ -3,7 +3,7 @@ import { ApiProperty } from '@nestjs/swagger';
 import { IsNotEmpty, IsString } from 'class-validator';
 import { TERMBASE_SIMPLE } from 'src/micro-base/class';
 
-export class QUERY_DTO {
+export class GET_DTO {
   @IsNotEmpty()
   @IsString()
   @ApiProperty()
@@ -12,6 +12,33 @@ export class QUERY_DTO {
   @IsString()
   @ApiProperty()
   locale: string;
+}
+
+export class MORE_DTO {
+  @IsNotEmpty()
+  @ApiProperty()
+  contents: string[];
+  @IsNotEmpty()
+  @IsString()
+  @ApiProperty()
+  locale: string;
+}
+
+export class MULTI_DTO {
+  @IsNotEmpty()
+  @IsString()
+  @ApiProperty()
+  content: string;
+  @IsNotEmpty()
+  @ApiProperty()
+  locales: string[];
+}
+
+export class SUGGEST_DTO {
+  @IsNotEmpty()
+  @IsString()
+  @ApiProperty()
+  content: string;
 }
 
 export class TRANSLATION_FULL {
