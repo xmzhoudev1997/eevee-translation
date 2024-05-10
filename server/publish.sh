@@ -1,5 +1,5 @@
 #!/bin/bash
-
+pnpm i
 pnpm run build
 
 # 定义镜像名称和容器名称
@@ -14,4 +14,4 @@ docker stop $(docker ps -aq --filter name=$CONTAINER_NAME)
 docker rm $(docker ps -aq --filter name=$CONTAINER_NAME)
 
 # 创建新的容器
-docker run -d --name $CONTAINER_NAME -p 8021:8000 -p 8022:8001 $IMAGE_NAME
+docker run -d --name $CONTAINER_NAME -p 8031:8000 -p 8032:8001 $IMAGE_NAME
